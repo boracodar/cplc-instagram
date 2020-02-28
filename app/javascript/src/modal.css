@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+}
+
+.instagram-modal {
+  background: rgba(0, 0, 0, .6);
+}
+
+.instagram-modal .tingle-modal-box {
+  width: auto;
+  margin: auto 1rem;
+  border-radius: 12px;
+}
+
+.instagram-modal .tingle-modal-box__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.instagram-modal .user-action {
+  padding: 1rem;
+  text-align: center;
+}
+
+.instagram-modal .user-action:not(:first-of-type) {
+  border-top: 1px solid var(--color-gray-lighter);
+}
+
+.instagram-modal a {
+  text-decoration: none;
+  color: var(--color-gray-darker);
+}
+
+@media screen and (min-width: 700px) {
+  .instagram-modal .user-action {
+    padding: 1rem 8rem;
+  }
+}

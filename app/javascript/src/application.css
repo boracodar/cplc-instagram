@@ -1,0 +1,239 @@
+@import "toastify-js/src/toastify.css";
+
+@import "./reset.css";
+@import "./variables.css";
+@import "./form.css";
+@import "./modal.css";
+@import "./comments.css";
+
+body {
+  background-color: var(--color-white-bis);
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-gray-darker);
+}
+
+body > header {
+  height: 77px;
+  background-color: white;
+  border-bottom: 1px solid var(--color-gray-lighter);
+}
+
+body > header nav {
+  display: flex;
+}
+
+body > header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+body > header .logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+body > header .logo-text {
+  width: 45%;
+  border-left: 1px solid var(--color-gray);
+  padding-left: 1rem;
+}
+
+body > header .logo-text img {
+  width: 100%;
+  margin-top: 7px;
+}
+
+body > header .actions a:not(:first-of-type) {
+  padding-left: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+main.posts-page {
+  display: grid;
+  grid-template-areas: 'posts';
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 935px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.posts {
+  grid-area: posts;
+}
+
+.post {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid var(--color-gray-lighter);
+}
+
+.post:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.post header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1rem;
+}
+
+.post header nav {
+  display: flex;
+  align-items: center;
+}
+
+.post header nav h4 {
+  margin-left: 0.5rem;
+}
+
+.post header .photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.post .image {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.post .image img {
+  width: 100%;
+}
+
+.post .details section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+}
+
+.post .actions .action {
+  cursor: pointer;
+}
+
+.post .actions .action,
+.post .actions .action .like,
+.post .actions .action .dislike {
+  display: inline;
+}
+
+.post .actions .action a {
+  text-decoration: none;
+}
+
+.post .details .actions .action:not(:first-of-type) {
+  margin-left: 0.75rem;
+}
+
+.post .details .created-at {
+  color: var(--color-gray-dark);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+aside, footer {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  main.posts-page {
+    grid-template-columns: 600px auto;
+    grid-column-gap: 2rem;
+    grid-template-areas:
+      'posts sidebar'
+      'posts footer'
+      'posts .';
+    margin-top: 60px;
+  }
+
+  .post:not(:first-of-type) {
+    margin-top: 60px;
+  }
+
+  aside {
+    grid-area: sidebar;
+    display: block;
+  }
+
+  aside .profile {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-column-gap: 1rem;
+    grid-template-areas:
+      'photo .'
+      'photo username'
+      'photo full-name'
+      'photo .';
+
+    color: var(--color-gray-darker);
+    text-decoration: none;
+  }
+
+  aside .profile .photo {
+    grid-area: photo;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray-light);
+    padding: 3px;
+  }
+
+  aside .profile .username {
+    grid-area: username;
+  }
+
+  aside .profile .full-name {
+    grid-area: full-name;
+    color: var(--color-gray-dark);
+    font-size: 14px;
+  }
+
+  aside .suggestions {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid var(--color-gray-lighter);
+  }
+
+  aside .suggestions h4 {
+    color: var(--color-gray-dark);
+    font-size: 14px;
+  }
+
+  aside .suggestions .profile:first-of-type {
+    margin-top: 1rem;
+  }
+
+  aside .suggestions .profile {
+    margin-top: 0.5rem;
+    grid-template-columns: 40px auto;
+  }
+
+  aside .suggestions .photo {
+    padding: 0;
+  }
+
+  footer {
+    grid-area: footer;
+    display: block;
+    margin-top: 1rem;
+    color: var(--color-gray-light);
+    font-size: 14px;
+  }
+}

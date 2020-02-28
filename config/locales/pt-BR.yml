@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      default: &default
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
+
+      post:
+        <<: *default
+        description: 'Descrição'
+        photo: 'Foto'

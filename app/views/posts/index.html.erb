@@ -1,0 +1,21 @@
+<main class="posts-page container">
+  <section class="posts">
+    <% if @posts.any? %>
+      <%= render @posts %>
+    <% else %>
+      Nenhum post ainda.
+    <% end %>
+  </section>
+
+  <aside>
+    sidebar
+
+    <section class="suggestions">
+      <h4>Sugestões Para Você</h4>
+    </section>
+  </aside>
+
+  <footer>
+    © <%= Date.current.year %> INSTAGRAM CLONE
+  </footer>
+</main>

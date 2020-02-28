@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo-icon">
+            <%= link_to embedded_svg("instagram-icon.svg"), root_path %>
+          </div>
+
+          <div class="logo-text">
+            <%= link_to root_path do %>
+              <%= image_tag "instagram.png" %>
+            <% end %>
+          </div>
+        </nav>
+
+        <nav class="actions">
+          <%= link_to embedded_svg("plus.svg"), new_post_path %>
+          <%= link_to embedded_svg("user.svg"), "#", data: { modal_id: "user-actions" } %>
+        </nav>
+      </div>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

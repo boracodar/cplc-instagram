@@ -1,0 +1,56 @@
+@import "./reset.css";
+@import "./variables.css";
+@import "./form.css";
+
+body {
+  background-color: var(--color-white-bis);
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-gray-darker);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+}
+
+.hero {
+  background-color: white;
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 3px;
+  padding: 2rem;
+  width: 400px;
+}
+
+.hero .logo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero img {
+  width: 40%;
+}
+
+.hero h2 {
+  color: var(--color-gray-dark);
+  font-weight: normal;
+  text-align: center;
+}
+
+.hero .help-links {
+  margin-top: 2rem;
+  border-top: 1px solid var(--color-gray-lighter);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.hero .help-links a {
+  display: block;
+  margin-top: 0.25rem;
+  text-decoration: none;
+  color: var(--color-blue);
+  font-weight: bold;
+  font-size: 14px;
+}
