@@ -44,3 +44,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "rails-i18n", "~> 6.0"
+
+gem "devise", "~> 4.7"
+gem "devise-i18n", "~> 1.9"
+
+gem "letter_opener", "~> 1.7"

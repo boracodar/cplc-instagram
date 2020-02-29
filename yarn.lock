@@ -6856,6 +6856,11 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
+tingle.js@^0.15.2:
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/tingle.js/-/tingle.js-0.15.2.tgz#db752cd205d748c6ab38e6dceb074aec88d85eee"
+  integrity sha512-lx5ZM9pxV7qLXMDonqPbA1Jqpvs8IQo/WxNzPwa+yE3/jfroEHWYmWNIi7Tiy/kkv4M9/FODtU1hMAIRxqKOVQ==
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
