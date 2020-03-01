@@ -53,3 +53,5 @@ gem "letter_opener", "~> 1.7"
 gem "active_storage_validations", "~> 0.8.7"
 
 gem "redis", "~> 4.1"
+
+gem "aws-sdk-s3", "~> 1.60"
