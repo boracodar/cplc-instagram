@@ -14,6 +14,10 @@ pt-BR:
         description: 'Descrição'
         photo: 'Foto'
 
+      comment:
+        <<: *default
+        body: 'Comentário'
+
       user:
         <<: *default
         name: 'Nome'

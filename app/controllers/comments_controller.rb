@@ -9,7 +9,8 @@ class CommentsController < ApplicationController
 
       redirect_to @comment.post, notice: "Comentário enviado com sucesso."
     else
-      flash.now[:alert] = @comment.errors.full_messages.to_sentense
+      @post = @comment.post
+      flash.now[:alert] = @comment.errors.full_messages.to_sentence
       render "posts/show"
     end
   end
