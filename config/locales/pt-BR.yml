@@ -1,6 +1,6 @@
 pt-BR:
   activerecord:
-    model:
+    models:
       user: 'Usuário'
 
     attributes:
