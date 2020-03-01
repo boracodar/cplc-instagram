@@ -1,5 +1,5 @@
 <%= link_to user_path(user.username), class: "profile" do %>
-  <%= image_tag "default-avatar.jpg", class: "photo" %>
+  <%= user_avatar(user) %>
 
   <h5 class="username"><%= user.username %></h5>
   <p class="full-name"><%= user.name %></p>

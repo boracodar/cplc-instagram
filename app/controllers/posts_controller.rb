@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     # flash.now[:notice] = "Deu certo!"
     # flash.now[:alert] = "Boooo"
 
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   def show
@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: 'Post foi criado com sucesso.'
     else
+      flash.now[:alert] = @post.errors.full_messages.to_sentence
       render :new
     end
   end
@@ -35,6 +36,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:description)
+    params.require(:post).permit(:photo, :description)
   end
 end

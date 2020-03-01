@@ -1,0 +1,11 @@
+<div class="action" data-post-id="<%= post.id %>"
+  data-like-id="<%= post.likes.find_by(user: current_user)&.id %>">
+
+  <div class="like <%= post.liked_by?(current_user) ? "hidden" : "" %>">
+    <%= embedded_svg "like.svg" %>
+  </div>
+
+  <div class="dislike <%= post.liked_by?(current_user) ? "" : "hidden" %>">
+    <%= embedded_svg "liked.svg" %>
+  </div>
+</div>
