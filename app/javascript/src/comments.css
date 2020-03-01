@@ -1,4 +1,4 @@
-/* @import "trix/dist/trix"; */
+@import "trix/dist/trix";
 
 .trix-button-group.trix-button-group--block-tools,
 .trix-button-group.trix-button-group--file-tools,

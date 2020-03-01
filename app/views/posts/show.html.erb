@@ -2,4 +2,26 @@
   <section class="posts">
     <%= render @post %>
   </section>
+
+  <aside>
+    <section class="comments" data-post-id="<%= @post.id %>">
+      <% if @post.comments.any? %>
+        <%= render @post.comments %>
+      <% else %>
+        Nenhum comentário ainda.
+      <% end %>
+
+      <%= form_with model: @comment, local: true, class: "new-comment" do |form| %>
+        <%= form.hidden_field :post_id, value: @post.id %>
+
+        <div class="field">
+          <%= form.rich_text_area :body, placeholder: "Comentário", required: true %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit "Enviar comentário" %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
 </main>

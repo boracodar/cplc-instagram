@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many :posts, foreign_key: :created_by_id, dependent: :destroy
   has_many :likes
+  has_many :comments
 
   has_one_attached :avatar
   validates :avatar, content_type: %i[png jpg jpeg]
