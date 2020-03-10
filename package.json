@@ -8,8 +8,8 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "tingle.js": "^0.15.2",
-    "toastify-js": "^1.6.2",
-    "trix": "^1.0.0"
+    "toastify-js": "^1.7.0",
+    "trix": "^1.2.3"
   },
   "version": "0.1.0",
   "devDependencies": {
