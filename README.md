@@ -1,3 +1,3 @@
 # CPLC - Clone do Instagram
 
-Applicação desenvolvida no [Curso de Programação Lucas Caton](https://www.lucascaton.com.br/cursos/cplc/).
+Applicação desenvolvida no [Curso de Programação Ruby on Rails 6](https://www.lucascaton.com.br/cursos/cplc/).
