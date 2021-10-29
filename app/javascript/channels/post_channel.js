@@ -1,4 +1,5 @@
 import consumer from "./consumer"
+import { handleActions } from "../packs/likes";
 
 consumer.subscriptions.create("PostChannel", {
   connected() {
@@ -15,5 +16,7 @@ consumer.subscriptions.create("PostChannel", {
 
     const posts = document.querySelector(".posts");
     posts.prepend(template.content.firstChild);
+
+    handleActions();
   }
 });

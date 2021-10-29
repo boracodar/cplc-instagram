@@ -1,7 +1,7 @@
 const token = document.querySelector("meta[name='csrf-token']").content;
 const headers = { "Content-Type": "application/json", "X-CSRF-Token": token };
 
-document.addEventListener('DOMContentLoaded', () => {
+export const handleActions = () => {
   document.querySelectorAll(".actions .like").forEach(button => {
     button.addEventListener("click", like);
   });
@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll(".actions .dislike").forEach(button => {
     button.addEventListener("click", dislike);
   });
-});
+};
+
+document.addEventListener("DOMContentLoaded", handleActions);
 
 function like(event) {
   const actionElement = event.target.closest(".action");
